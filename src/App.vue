@@ -37,6 +37,15 @@
     <arcgis slug="ArcGIS:Newspaper"/>
   </drop-down>
 
+  <drop-down
+      title="visicom"
+      link="https://api.visicom.ua/uk/products/tiles/tiles-dataset"
+  >
+    <div v-for="map in mapsVisicom" :key="map.name">
+      <mapCustom :mapInfo="map" />
+    </div>
+  </drop-down>
+
 
 </template>
 
@@ -91,8 +100,20 @@ export default {
           link: 'https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=95a888168fbd4b06b5596ffc9e30d527'
         }
       ],
-      openNonLicenseMaps: true,
-      openLicenseMaps: true,
+      mapsVisicom: [
+        {
+          name: "base",
+          link: "https://tms2.visicom.ua/2.0.0/world,ua/base/{z}/{x}/{y}.png"
+        },
+        {
+          name: "base_en",
+          link: "https://tms2.visicom.ua/2.0.0/world,ua/base_en/{z}/{x}/{y}.png"
+        },
+        {
+          name: "world",
+          link: "https://tms2.visicom.ua/2.0.0/world,ua/base/{z}/{x}/{y}.png"
+        },
+      ]
     }
   }
 }

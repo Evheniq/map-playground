@@ -23,9 +23,9 @@ export default {
   methods: {
     addBorder(){
       L.geoJSON(data, {
-        color: "#eb0000",
+        color: "#ff2424",
         weight: 3,
-        opacity: .3,
+        opacity: .6,
         lineJoin: 'round',
         stroke: true,
         fill:false
@@ -36,7 +36,8 @@ export default {
     this.map = L.map(this.$refs[this.mapInfo.name]).setView([48.505, 32.09], 6);
 
     L.tileLayer(this.mapInfo.link, {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      tms: true
     }).addTo(this.map);
   }
 }

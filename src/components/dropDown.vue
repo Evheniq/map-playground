@@ -2,7 +2,9 @@
 
   <h1 style="margin-top: 50px;">
     {{ title }}
-    <button @click="open = !open">{{ !!open ? "-" : "+" }}</button>
+    <button @click="open = !open">
+      {{ !!open ? "-" : "+" }}
+    </button>
   </h1>
   <a :href="link">Source</a>
 

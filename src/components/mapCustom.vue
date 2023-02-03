@@ -37,7 +37,6 @@ export default {
 
     L.tileLayer(this.mapInfo.link, {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      tms: true
     }).addTo(this.map);
   }
 }

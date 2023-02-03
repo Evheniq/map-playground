@@ -42,7 +42,7 @@
       link="https://api.visicom.ua/uk/products/tiles/tiles-dataset"
   >
     <div v-for="map in mapsVisicom" :key="map.name">
-      <mapCustom :mapInfo="map" />
+      <visicom :mapInfo="map" />
     </div>
   </drop-down>
 
@@ -54,9 +54,10 @@ import mapCustom from "./components/mapCustom.vue";
 import DropDown from "./components/dropDown.vue";
 import Maptiler from "./components/maptiler.vue";
 import Arcgis from "./components/arcgis.vue";
+import Visicom from "./components/visicom.vue";
 
 export default {
-  components: {Arcgis, Maptiler, DropDown, mapCustom},
+  components: {Visicom, Arcgis, Maptiler, DropDown, mapCustom},
 
   data() {
     return {

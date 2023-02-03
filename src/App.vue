@@ -109,10 +109,6 @@ export default {
           name: "base_en",
           link: "https://tms2.visicom.ua/2.0.0/world,ua/base_en/{z}/{x}/{y}.png"
         },
-        {
-          name: "world",
-          link: "https://tms2.visicom.ua/2.0.0/world,ua/base/{z}/{x}/{y}.png"
-        },
       ]
     }
   }
